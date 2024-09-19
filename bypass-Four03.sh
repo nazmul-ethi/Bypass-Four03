@@ -1,4 +1,5 @@
-#! /bin/bash
+#!/bin/bash
+
 # Colors
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -8,13 +9,38 @@ YELLOW='\033[1;33m'
 RESET='\033[0m'
 VIOLET='\033[38;2;138;43;226m'
 ORANGE='\033[38;2;255;165;0m'
+INDIGO='\033[38;2;75;0;130m'
+DEEP_INDIGO='\033[38;2;48;0;102m'
+
+
+
+# Add help menu
+if [[ "$1" == "--help" || "$1" == "-h" ]]; then
+    echo -e "${VIOLET}Usage: ./bypass-403.sh [URL] [path]"
+    echo -e "Example: ./bypass-403.sh https://example.com admin\n"
+	echo -e "Example: ./bypass-403.sh https://example.com admin/index.php\n"
+	echo -e "Example: ./bypass-403.sh https://example.com server-status\n"
+    echo -e "${CYAN}Options:${RESET}"
+    echo -e "  -h, --help    Show this help menu"
+    echo -e "\nThis tool attempts to bypass HTTP 403 forbidden errors using various path and header manipulation techniques."
+    exit 0
+fi
+
+# Check for required arguments
+if [[ $# -lt 2 ]]; then
+    echo -e "${RED}Error: Missing required arguments.${RESET}"
+    echo -e "Usage: ./bypass-403.sh [URL] [path]"
+    exit 1
+fi
+
 # Add color to figlet
 echo -e "${VIOLET}"
 figlet -f slant Bypass-Four03
 echo -e "${ORANGE}"
 echo "                                               By nazmul__ethi"
-echo "./bypass-403.sh https://example.com path"
+echo "./bypass-403.sh $1 $2"
 echo " "
+
 echo -e "${VIOLET}PATH FUZZING${ORANGE}"
 echo ""
 curl -k -s -o /dev/null -iL -w "%{http_code}","%{size_download}" $1/$2
@@ -198,3 +224,4 @@ echo ""
 echo -e "${VIOLET}Way back machine${RESET}"
 echo ""
 curl -s  https://archive.org/wayback/available?url=$1/$2 | jq -r '.archived_snapshots.closest | {available, url}'
+
