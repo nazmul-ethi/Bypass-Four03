@@ -13,7 +13,11 @@ sudo chmod +x bypass-Four03.sh
 #
 ### Example of usage
 ```sql
-bash bypass-Four03.sh https://www.example.com admin/index.html
+bash bypass-403.sh https://example.com admin
+
+bash bypass-403.sh https://example.com admin/index.php
+
+bash bypass-403.sh https://example.com server-status
 ```
 #
 #
