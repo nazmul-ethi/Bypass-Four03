@@ -5,10 +5,11 @@ Bypass-Four03 is a bash tool designed to test for 403 Forbidden bypass technique
 #
 ## Installation Tips:
 ```powershell
-sudo apt-get install figlet
 git clone https://github.com/nazmul-ethi/Bypass-Four03.git
 cd Bypass-Four03/
 sudo chmod +x bypass-Four03.sh
+
+sudo apt install curl jq figlet
 ```
 #
 ### Example of usage
