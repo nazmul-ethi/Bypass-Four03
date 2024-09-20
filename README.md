@@ -1,5 +1,5 @@
 # Bypass-Four03
-Bypass-Four03 is a bash tool designed to test for 403 Forbidden bypass techniques using various path and header fuzzing methods. It automates HTTP requests with multiple encodings, headers, and special characters to identify potential access control weaknesses in web applications. Ideal for penetration testers and bug bounty hunters.
+Bypass-Four03 is a powerful bash tool designed to help testers bypass HTTP 403 forbidden errors through various path and header manipulation techniques. It also includes fuzzing for HTTP methods and protocol versions, making it a versatile addition to any web security researcher's toolkit.
 
 
 #
