@@ -14,11 +14,10 @@ sudo chmod +x bypass-Four03.sh
 ### Example of usage
 ```sql
 Usage: ./bypass-Four03.sh [URL] [path]
-Example: ./bypass-Four03.sh https://example.com admin
 
-Example: ./bypass-Four03.sh https://example.com admin/index.php
-
-Example: ./bypass-Four03.sh https://example.com server-status
+./bypass-Four03.sh https://example.com admin
+./bypass-Four03.sh https://example.com admin/index.php
+./bypass-Four03.sh https://example.com server-status
 
 Options:
   -h, --help    Show this help menu
