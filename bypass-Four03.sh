@@ -23,9 +23,9 @@ if [[ "$1" == "--help" || "$1" == "-h" ]]; then
     exit 0
 fi
 
-echo -e "${VIOLET}"
-figlet -f slant Bypass-Four03
 echo -e "${ORANGE}"
+figlet -f slant Bypass-Four03
+echo -e "${VIOLET}"
 echo "                                               By nazmul__ethi"
 echo "./bypass-403.sh $1 $2"
 echo " "
