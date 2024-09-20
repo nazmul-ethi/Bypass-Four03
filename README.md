@@ -22,5 +22,6 @@ bash bypass-403.sh https://example.com server-status
 #
 #
 #
-![403](https://github.com/user-attachments/assets/9d8631cc-c695-46c8-9249-99e060940e37)
-![401](https://github.com/user-attachments/assets/08b8add7-1a87-4619-a4a4-5f34aef670b1)
+![image](https://github.com/user-attachments/assets/a75f4630-cff0-472b-b58b-5e793ae8123f)
+![image](https://github.com/user-attachments/assets/1d49a99d-300d-48c5-ab60-ef5edd946011)
+
