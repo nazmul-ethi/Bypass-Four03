@@ -4,7 +4,7 @@ Bypass-Four03 is a powerful bash tool designed to help testers bypass HTTP 403 f
 
 #
 ## Installation Tips:
-```powershell
+```yaml
 git clone https://github.com/nazmul-ethi/Bypass-Four03.git
 cd Bypass-Four03/
 sudo chmod +x bypass-Four03.sh
@@ -13,7 +13,7 @@ sudo apt install curl jq figlet
 ```
 #
 ### Example of usage
-```sql
+```yaml
 Usage: ./bypass-Four03.sh [URL] [path]
 
 ./bypass-Four03.sh https://example.com admin
