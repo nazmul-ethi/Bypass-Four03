@@ -138,4 +138,4 @@ done
 echo ""
 echo -e "${VIOLET}WAYBACK MACHINE CHECK${RESET}"
 echo ""
-curl -s "https://archive.org/wayback/available?url=$1/$2" | jq -r '.archived_snapshots.closest | {available, url}'
+curl -s  https://archive.org/wayback/available?url=$1/$2 | jq -r '.archived_snapshots.closest | {available, url}'
