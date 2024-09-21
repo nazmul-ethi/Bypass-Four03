@@ -26,7 +26,7 @@ fi
 echo -e "${ORANGE}"
 figlet -f slant Bypass-Four03
 echo -e "${ORANGE}"
-echo "                                           				    By nazmul_ethi"
+echo "                                           				    By nazmul__ethi"
 echo "./bypass-Four03.sh $1 $2"
 echo " "
 
