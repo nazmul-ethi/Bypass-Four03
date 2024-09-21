@@ -98,6 +98,14 @@ fuzz_headers=(
 	"-H 'X-HTTP-Method-Override: HEAD'"
 	"-H 'X-HTTP-Method-Override: POST'"
 	"-H 'X-HTTP-Method-Override: PUT'"
+	"-H 'X-Forwarded-Port: 443'"
+	"-H 'X-Forwarded-Port: 443'"
+	"-H 'X-Forwarded-Port: 4443'"
+	"-H 'X-Forwarded-Port: 4443'"
+	"-H 'X-Forwarded-Port: 80'"
+	"-H 'X-Forwarded-Port: 8080'"
+	"-H 'X-Forwarded-Port: 8443'"
+	"-H 'X-Forwarded-Port: 8443'"
 )
 
 for header in "${fuzz_headers[@]}"; do
