@@ -27,6 +27,6 @@ Options:
 #
 #
 
-![image](https://github.com/user-attachments/assets/7eb71076-bc34-47df-82ff-78f0d18100f3)![image]
+![image](https://github.com/user-attachments/assets/7eb71076-bc34-47df-82ff-78f0d18100f3)
 ![image](https://github.com/user-attachments/assets/1d49a99d-300d-48c5-ab60-ef5edd946011)
 
