@@ -35,11 +35,11 @@ colorize_status_code() {
     http_code=$1
     # Apply color based on HTTP status code
     if [[ "$http_code" == "200" ]]; then
-        echo -e "${GREEN}${http_code}${RESET}"
+        echo -e "${ORANGE}${http_code}${RESET}"
     elif [[ "$http_code" == "403" ]]; then
         echo -e "${RED}${http_code}${RESET}"
     elif [[ "$http_code" == "405" ]]; then
-        echo -e "${ORANGE}${http_code}${RESET}"
+        echo -e "${YELLOW}${http_code}${RESET}"
     elif [[ "$http_code" == "404" ]]; then
         echo -e "${RED}${http_code}${RESET}"
     elif [[ "$http_code" == "500" ]]; then
