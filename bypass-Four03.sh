@@ -13,7 +13,7 @@ INDIGO='\033[38;2;75;0;130m'
 
 # Help menu
 if [[ "$1" == "--help" || "$1" == "-h" ]]; then
-    echo -e "${VIOLET}Usage: ./bypass-Four03.sh [URL] [path]"
+    echo -e "${ORANGE}Usage: ./bypass-Four03.sh [URL] [path]"
     echo -e "Example: ./bypass-Four03.sh https://example.com admin\n"
     echo -e "Example: ./bypass-Four03.sh https://example.com admin/index.php\n"
     echo -e "Example: ./bypass-Four03.sh https://example.com server-status\n"
